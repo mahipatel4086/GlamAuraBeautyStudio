@@ -1,7 +1,4 @@
-  
-
-  
-  <footer class="site-footer">
+    <footer class="site-footer">
     <div class="container-fluid">
       <div class="d-flex justify-content-between align-items-start flex-wrap" style="max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; gap: 2rem;">
 
