@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 175">
+  <defs>
+    <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FD5949;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#D6249F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9B36B7;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#515BD4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="87.5" cy="87.5" r="87.5" fill="url(#instagram-gradient)"/>
+  <!-- Instagram camera icon -->
+  <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Camera body -->
+    <rect x="50" y="55" width="75" height="65" rx="8"/>
+    <!-- Lens circle -->
+    <circle cx="87.5" cy="87.5" r="18"/>
+    <!-- Flash -->
+    <circle cx="65" cy="65" r="2" fill="#fff"/>
+  </g>
+</svg>

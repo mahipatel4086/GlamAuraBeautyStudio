@@ -1,0 +1,46 @@
+/* Gallery-specific styles: category titles, subtle hover overlay, responsive grid tweaks */
+.gallery-title{font-family:'Playfair Display',serif;font-size:1.5rem;margin:.5rem 0;color:var(--plum)}
+.gallery-category{padding:1.25rem 0;border-top:1px solid rgba(71,38,52,0.04)}
+.gallery-category p.muted{margin-bottom:0.75rem}
+
+.gallery-item{background:transparent;border:0;padding:0;position:relative;overflow:hidden;border-radius:12px}
+.gallery-item img{border-radius:12px;display:block;transition:transform .25s ease,filter .25s ease;width:100%;aspect-ratio:1/1;object-fit:cover}
+.gallery-item::after{content:'';position:absolute;inset:0;background:none;opacity:0;transition:opacity .25s}
+.gallery-item:hover img{transform:scale(1.04);filter:brightness(.98)}
+.gallery-item:hover::after{opacity:1}
+
+/* Small caption overlay (optional) */
+.gallery-item .caption{position:absolute;left:12px;bottom:12px;color:#fff;background:rgba(0,0,0,0.35);padding:.35rem .5rem;border-radius:8px;font-size:.85rem;backdrop-filter:blur(4px)}
+
+
+/* Make lightbox image slightly larger on wide screens */
+@media(min-width:1200px){
+  .lightbox img{max-width:92%;max-height:88%}
+}
+
+/* Category filter button styles */
+.category-filters{gap:.75rem;flex-wrap:wrap;margin:.5rem 0 .6rem}
+.category-filter-btn{background:rgba(255,255,255,0.85);border:1px solid rgba(71,38,52,0.06);padding:.65rem 1.15rem;border-radius:999px;color:var(--plum);font-weight:700;cursor:pointer;transition:all .22s ease,transform .18s ease;box-shadow:0 8px 20px rgba(71,38,52,0.04);font-size:.95rem;min-width:120px;text-align:center}
+.category-filter-btn:hover{transform:translateY(-3px) scale(1.01);box-shadow:0 14px 34px rgba(71,38,52,0.06)}
+.category-filter-btn.active{background:var(--rose-gold);color:white;box-shadow:0 16px 40px rgba(71,38,52,0.12);border-color:transparent}
+.category-filter-btn:focus{outline:3px solid rgba(199,164,106,0.18);outline-offset:3px}
+
+/* Transitions for gallery sections when switching */
+.gallery-category{transition:opacity .32s ease,transform .32s ease;opacity:1;transform:none;padding:.9rem 0}
+.gallery-category.hidden{opacity:0;transform:translateY(8px);pointer-events:none;height:0;overflow:hidden;margin:0;padding:0}
+
+@media(max-width:767.98px){
+  .category-filter-btn{
+    min-width:100px;
+    font-size:.9rem;
+    padding:.5rem 1rem;
+  }
+}
+
+@media(max-width:575.98px){
+  .category-filter-btn{
+    min-width:80px;
+    font-size:.85rem;
+    padding:.45rem .8rem;
+  }
+}
